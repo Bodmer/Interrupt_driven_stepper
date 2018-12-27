@@ -166,7 +166,7 @@ void startTimer1(void)
 void stopTimer1(void)
 {
   noInterrupts();           // disable all interrupts
-  TIMSK1 &= !(1 << TOIE1);  // disable timer overflow interrupt
+  TIMSK1 &= ~(1 << TOIE1);  // disable timer overflow interrupt
   interrupts();             // enable all interrupts
 }
 
